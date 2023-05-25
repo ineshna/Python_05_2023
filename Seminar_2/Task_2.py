@@ -18,6 +18,10 @@ while a > a3:
   a2 = a3
   a3 = a1 + a2
   count +=1
-print(count)
+if a3 == a:
+  print(count)
+else:
+  print("-1")
+
 
 

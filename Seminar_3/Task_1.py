@@ -8,8 +8,11 @@
 [1, 1, 2, 0, 1, 2, 1, 2] -> 3
 """
 list_1 = [1, 1, 2, 0, 1, 2, 1, 2]
-list_res = []
-for i in list_1:
-    if i not in list_res:
-        list_res.append(i)
-print(len(list_res))
+# list_res = []
+# for i in list_1:
+#     if i not in list_res:
+#         list_res.append(i)
+# print(len(list_res))
+
+
+print(len(set(list_1)))

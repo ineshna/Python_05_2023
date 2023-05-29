@@ -12,8 +12,8 @@ lst = ['инженер-конструктор Игорь', 'главный бу�
 
 for el in lst:
 
-el = el.split()
+ el = el.split()
 
-rez_str = "Привет, " + el[-1].title() + "!"
+ rez_str = "Привет, " + el[-1].title() + "!"
 
-print(rez_str)
+ print(rez_str)

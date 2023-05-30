@@ -10,3 +10,4 @@
 """
 list_1 = [10, 5, 7, 3, 3, 2, 5, 7, 3, 8]
 x = int(input('Введите число:'))
+print(min(list_1, key=lambda a:abs(a-x)))

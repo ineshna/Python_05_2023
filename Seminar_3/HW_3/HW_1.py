@@ -17,6 +17,11 @@
 list_1 = [10, 5, 7, 3, 3, 0, 5, 7, 2, 8]
 x = int(input('Введите искомое число :'))
 result = 0
+my_count = list_1.count(x)
+if my_count == 0:
+ print("-1")
+else:
+ print(my_count)
 """
 for i in list_1:
        if x not in list_1:
@@ -31,5 +36,5 @@ for i in list_1:
       result = -1
 print(result)
 """
-print(list_1.count(x))
+#print(list_1.count(x))
 

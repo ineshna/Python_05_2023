@@ -12,7 +12,20 @@
     Input1: 2 4 6 8 10 10 8 6 4 2
     Input2: 3 9 12 15 18
     Output: Повторяющихся чисел нет
-"""
+ """
+# list_1 = [2, 4, 6, 8, 10, 10, 8, 6, 4, 2]
+# list_2 =[3, 9, 12, 15, 18]
 list_1 = [2,4,6,8,10,12,10,8,6,4,2]
 list_2 =[3,6,9,12,15,18]
-result_list =[]
+result = []
+# result = list(set(list_1) & set(list_2))
+# print(result)
+
+for i in list_1:
+    if i in list_2 and i not in result:
+        result.append(i)
+print(*result, sep=', ')
+# if result == 0:
+#     print("-1")
+# else:
+#     print(result)

@@ -12,15 +12,15 @@ Output: a b c d a_1 a_2 a_3 a_4 a_5 a_6 a_7
 
 Строку не обязательно вводить с клавиатуры
 """
-list_1 = "a a a b c a a d c d d"
-result =[]
-for ind, val in enumerate(list_1):
-    n = list_1[0:ind].count(val)
-    if n > 0:
-        result.append(f"{val}_{n}")
-    else:
-        result.append(val)
-print("".join(result))
+# list_1 = "a a a b c a a d c d d"
+# result =[]
+# for ind, val in enumerate(list_1):
+#     n = list_1[0:ind].count(val)
+#     if n > 0:
+#         result.append(f"{val}_{n}")
+#     else:
+#         result.append(val)
+# print("".join(result))
 
 # тернарный оператор вокруг addend
 # list_1 = "a a a b c a a d c d d"
@@ -37,3 +37,19 @@ print("".join(result))
 #     n = list_1[0:ind].count(val)
 #     result.append(f"{vav}_{n}" if n > 0 else val)
 # print("".join(result))
+
+
+input_String ="a b c d a a a a a a a" 
+amount_of_letters = dict()
+output_String =""
+for el in input_String:
+    if el!=" ":
+        if el not in amount_of_letters:
+            amount_of_letters[el]=1
+            output_String+=  el
+        else:
+            output_String+= el + "_" + str(amount_of_letters[el])
+            amount_of_letters[el] +=1            
+    else:
+        output_String=output_String+el
+print(output_String)

@@ -23,13 +23,21 @@
 # print(defference_list([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5] ))
 
 
+# def defference_list(list1: list, list2:list) -> list:
+#     set_list2 = set(list2)
+#     new_list =[]
+#     for item in list1:
+#         if item not in set_list2:
+#             new_list.append(item)
+#     return new_list
+
+# print(defference_list([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1]))
+
+# print(defference_list([3, 4, 1, 5, 1, 3, 10, 4, 9, 5], [9, 6, 6, 5, 10, 1, 10, 9, 1, 5] ))
+
 def defference_list(list1: list, list2:list) -> list:
     set_list2 = set(list2)
-    new_list =[]
-    for item in list1:
-        if item not in set_list2:
-            new_list.append(item)
-    return new_list
+    return[item for item in list1 if item not in set_list2 ] # comprihension
 
 print(defference_list([3, 1, 3, 4, 2, 4, 12], [4, 15, 43, 1, 15, 1]))
 

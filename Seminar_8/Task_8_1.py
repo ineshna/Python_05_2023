@@ -1,12 +1,3 @@
-
-
-
-
-
-
-
-
-
 # Создать телефонный справочник с возможностью импорта и экспорта данных в формате .csv
 # Информация о человеке:
 # Фамилия, Имя, Телефон, Описание
@@ -28,16 +19,46 @@
 # - Разделить на model-view-controller
 
 # user = ["first_name", "second_name", "number", "discription"]
-# dictionary = {1:["first_name", "second_name", "number", "discription"],
+# phone_dir = {1:["first_name", "second_name", "number", "discription"],
 #               2:["first_name", "second_name", "number", "discription"]}
+# key_count -счетчик id
 
-def inputUsers() -> list:
+def Input_Users() -> list:
     user = []
     user.append(input("Input first name: "))
     user.append(input ("Input secomd name: "))
     user.append(input("Input phone number: "))
     user.append(input("Input description: "))
     return user
+#print(Input_Users())
 
-print(inputUsers())
- #   def create(user : list) -> dict:
+# key_count = 0
+# phone_dir = dict()
+def create(phone_dir_local:dict, idc: int, user : list ) -> dict:
+    idc += 1
+    phone_dir_local[idc] = user
+    return phone_dir_local, idc
+
+# user1 = ["first_name1", "second_name1", "number1", "discription1"]
+# user2 = ["first_name2", "second_name2", "number2", "discription2"]
+
+# phone_dir,key_count = create (phone_dir, key_count,user1)
+# phone_dir,key_count = create (phone_dir, key_count,user2)
+#print(phone_dir)
+
+
+def menu ():
+    print("Введите 1 если хотите ввести пользователя: ")
+    print("Введите 2 если хотите распечатать спрвочник: ")
+    key_count = 0
+    phone_dir = dict()
+    while True:
+        num = int(input("Выберите операция"))
+        if num == 0:
+            break
+        if num == 1:
+            user = Input_Users()
+            phone_dir,key_count = create (phone_dir, key_count,user)
+        if num == 2:
+            print(phone_dir)
+menu()
